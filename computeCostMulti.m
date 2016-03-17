@@ -13,7 +13,9 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
-
+JMatrix = X * theta - y;
+TMatrix = JMatrix.';
+J = TMatrix * JMatrix / 2 / m
 
 
 

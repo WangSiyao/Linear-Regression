@@ -106,7 +106,12 @@ fprintf('\n');
 % not need to be normalized.
 price = 0; % You should change this
 
-price = [1, (1650-mu(1))/sigma(1), (3-mu(2))/sigma(2)] * theta;
+[~,m] = size(X);
+for i = 1:m
+    X_norm(:,i) = (X(:,i) - mu(1,i)) ./ sigma(1,i);
+end
+
+price = [1, 1650, 3] * theta;
 
 % ============================================================
 
